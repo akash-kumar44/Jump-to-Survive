@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.bg{
+    width: 100000vw;
+    height: 100vh;
+    background-image:url(/images&Sound/bg.png);
+    position: absolute;
+    background-repeat: repeat-x;
+    background-size: 90vw 120vh ;
+    animation: moveBg linear 100s infinite;
+}
+/*
+#cloud1{
+    width: 198px;
+    height: 119px;
+    background-image: url(/Images&Sound/cloud1.png);
+    background-size: cover;
+    position: relative;
+    left: 40vw;
+    top: 2.9vh;
+    animation: moveCloud 11s linear 7s infinite;
+}
+#cloud2{
+    width: 197px;
+    height: 134px;
+    background-image: url(/Images&Sound/cloud2.png);
+    background-size: cover;
+    position: relative;
+    left: 35vw;
+    bottom: 11vh;
+    animation: moveCloud 10s linear 15s infinite;
+    
+}
+
+#cloud3{
+    width: 16vw;
+    height: 24vh;
+    background-image: url(/Images&Sound/cloud3.png);
+    background-size: cover;
+    position: relative;
+    left: 26vw;
+    bottom: 40vh;
+    animation: moveCloud 15s linear 30s infinite;
+    
+}
+*/
+#score{
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+}
+.dora{
+    width: 111px;
+    height: 148px;
+    background-image: url(/Images&Sound/doraemon22.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 11vh;
+    left: 4vw;
+}
+.jumpDora{
+    animation: jump linear 1s infinite;
+}
+.rat{
+    width: 114px;
+    height: 146px;
+    background-image: url(/Images&Sound/rat2.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 1vw;
+    left: 90vw;
+}
+.moveObstacle{
+    animation: moveRat linear 5s infinite;
+}
+.gameOver{
+    visibility: hidden;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 50vh;
+    left: 39vw;
+}
+#btn{
+    visibility: hidden;
+    font-size: 27px;
+    border-radius: 4px;
+    border: 1px solid ;
+    position: absolute;
+    bottom: 42vh;
+    left: 43vw;
+    background-color: rgb(45, 160, 226);
+}
+#btn:hover{
+    background-color: rgb(0, 255, 191);
+    cursor: pointer;
+}
+@keyframes moveBg {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes moveRat {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -50vw;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 8.2vh;
+    }
+    50%{
+        bottom: 50vh;
+    }
+    100%{
+        bottom: 8.2vh;
+    }
+}
+@keyframes moveCloud{
+    0%{
+        transform: translateX(150vw);
+    }
+    100%{
+        transform: translateX(-60vw);
+    }
+}
