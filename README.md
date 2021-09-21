@@ -2,6 +2,9 @@
 - Game using HTML, CSS and JS
 - Front-end Project
 - Beginner Friendly
+## Preview:
+<img src="https://github.com/akash-kumar44/Jump-to_Survive/blob/main/preview/preview.gif" weight ="1000" height = "400">
+
 ## Contact Info: 
 <a href="https://www.linkedin.com/in/akash-kumar-1b6339214/"><img width="30px" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" /></a>&ensp;
 <a href="https://twitter.com/akash_bhumbak"><img width="30px" src="https://www.vectorlogo.zone/logos/twitter/twitter-official.svg" /></a>&ensp;
