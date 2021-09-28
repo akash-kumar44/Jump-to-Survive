@@ -15,10 +15,16 @@ else{
     document.getElementById('highScore').innerHTML = "High Score: " + localStorage.getItem('highest');
 }
 function jumpDoraemon() {
-    document.onkeydown = function (e) {
+     document.onkeydown = function (e) {
         dora = document.querySelector('.dora');
+        rat = document.querySelector('.rat');
         console.log("Key code is: ", e.keyCode)
-        if (e.keyCode == 32 || e.keyCode == 38) {
+        if(document.getElementById('gmOver').style.visibility == "visible"){
+            dora.classList.remove('doraCharacter2');
+            dora.classList.remove('doraCharacter1');
+            dora.classList.remove('jumpDora');
+        }
+        else if (e.keyCode == 32 || e.keyCode == 38) {
             dora.classList.remove('doraCharacter2');
             dora.classList.add('doraCharacter1');
             dora.classList.add('jumpDora');
@@ -42,12 +48,12 @@ function jumpDoraemon() {
                 dora.style.left = dx + 50 + "px";
             }
         }
+        }
     }
-}
 
 
 function gamePlay() {
-    audio.play();
+    // audio.play();
     setInterval(() => {
         dx = parseInt(window.getComputedStyle(dora, null).getPropertyValue('left'));
         dy = parseInt(window.getComputedStyle(dora, null).getPropertyValue('bottom'));
@@ -57,11 +63,11 @@ function gamePlay() {
         diffX = Math.abs(dx - rx);
         diffY = dy - ry;
         if (diffX <= 60 && diffY <= 80) {
-            collison.play();
+            // collison.play();
             audio.pause();
+            rat.classList.remove('moveObstacle');
             gameOver.style.visibility = 'visible';
             button.style.visibility = 'visible';
-            rat.classList.remove('moveObstacle');
             dora.classList.add('gameOverDora');
             if(localStorage.getItem('highest') == null){
             localStorage.setItem('highest',score);
@@ -113,18 +119,24 @@ function gamePlay() {
     }, 10);
 
 }
-jumpDoraemon();
+
 function playGame() {
+    jumpDoraemon();
+    gamePlay();
     dora = document.querySelector('.dora');
     rat = document.querySelector('.rat');
     playButton = document.querySelector('#btn1');
     gameOver = document.querySelector('.gameOver');
+    dora.classList.add('doraCharacter1');
     playButton.style.visibility = 'hidden';
     rat.classList.add('moveObstacle');
-    gamePlay();
+    gameOver.style.visibility = 'hidden';
+    button.style.visibility = 'hidden';
 }
 
 function playAgain() {
+    jumpDoraemon();
+    gamePlay();
     dora = document.querySelector('.dora');
     rat = document.querySelector('.rat');
     gameOver = document.querySelector('.gameOver');
@@ -133,11 +145,11 @@ function playAgain() {
     rat.classList.add('moveObstacle');
     gameOver.style.visibility = 'hidden';
     button.style.visibility = 'hidden';
-    gamePlay();
 }
 document.querySelector('#btn1').addEventListener('click',playGame);
-button.addEventListener('click', () => {
+document.querySelector('#btn2').addEventListener('click', () => {
     document.getElementById('score').innerHTML = "Score: " + score;
-    playAgain();
+    playGame();
 });
+
 

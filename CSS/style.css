@@ -14,41 +14,6 @@ body{
     background-size: 90vw 120vh ;
     animation: moveBg linear 100s infinite;
 }
-/*
-#cloud1{
-    width: 198px;
-    height: 119px;
-    background-image: url(/Images&Sound/cloud1.png);
-    background-size: cover;
-    position: relative;
-    left: 40vw;
-    top: 2.9vh;
-    animation: moveCloud 11s linear 7s infinite;
-}
-#cloud2{
-    width: 197px;
-    height: 134px;
-    background-image: url(/Images&Sound/cloud2.png);
-    background-size: cover;
-    position: relative;
-    left: 35vw;
-    bottom: 11vh;
-    animation: moveCloud 10s linear 15s infinite;
-    
-}
-
-#cloud3{
-    width: 16vw;
-    height: 24vh;
-    background-image: url(/Images&Sound/cloud3.png);
-    background-size: cover;
-    position: relative;
-    left: 26vw;
-    bottom: 40vh;
-    animation: moveCloud 15s linear 30s infinite;
-    
-}
-*/
 #score{
     font-size: 30px;
 font-weight: bold;
@@ -167,14 +132,6 @@ border-radius: 4px;
     }
     100%{
         bottom: 8.2vh;
-    }
-}
-@keyframes moveCloud{
-    0%{
-        transform: translateX(150vw);
-    }
-    100%{
-        transform: translateX(-60vw);
     }
 }
 @keyframes gameOverDora {
