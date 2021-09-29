@@ -7,7 +7,7 @@
 
 ## Quick Start:
 1. Fork the project
-2. Clone it using ``` git clone <Link of the project>```
+2. Clone it using ``` git clone https://github.com/akash-kumar44/Jump-to_Survive.git ```
 3. Navigate to project directory ```cd Jump-to_Survive```
 4. Run the index.html file 
 
